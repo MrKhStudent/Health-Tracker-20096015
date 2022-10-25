@@ -1,6 +1,8 @@
 package ie.setu.config
 
 import ie.setu.controllers.HealthTrackerController
+//import ie.setu.controllers.addActivity
+//import ie.setu.controllers.getAllActivities
 import  io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
 import io.javalin.plugin.openapi.OpenApiOptions
@@ -8,6 +10,9 @@ import io.javalin.plugin.openapi.OpenApiPlugin
 import io.javalin.plugin.openapi.ui.SwaggerOptions
 import io.javalin.plugin.openapi.ui.ReDocOptions
 import io.swagger.v3.oas.models.info.Info
+import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.datatype.joda.JodaModule
+//import ie.setu.controllers.getActivitiesByUserId
 
 class JavalinConfig {
 
@@ -41,11 +46,18 @@ class JavalinConfig {
                     get(HealthTrackerController::getUserByUserId)
                     delete(HealthTrackerController::deleteUser)
                     patch(HealthTrackerController::updateUser)
+                    //The overall path is: "/api/users/:user-id/activities"
+                    path("activities"){
+                        get(HealthTrackerController::getActivitiesByUserId)
+                    }
                 }
                 path("/email/{email}"){
                     get(HealthTrackerController::getUserByEmail)
                 }
-
+            }
+            path("/api/activities") {
+                get(HealthTrackerController::getAllActivities)
+                post(HealthTrackerController::addActivity)
             }
         }
     }
