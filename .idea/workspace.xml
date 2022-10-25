@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="">
+    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="Lab05 (with issues)">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/helpers/Fixtures.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ie/setu/repository/UserDAOTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/DbConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/controllers/HealthTrackerController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/UserDAO.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +46,23 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="Kotlin.AppKt">
+  <component name="RunManager" selected="JUnit.UserDAOTest">
+    <configuration name="UserDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.repository" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.repository.UserDAOTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ie.setu.AppKt" />
       <module name="healthtrackerrest" />
@@ -74,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="Kotlin.AppKt" />
       </list>
     </recent_temporary>
@@ -87,8 +111,18 @@
       <option name="presentableId" value="Default" />
       <updated>1664880364129</updated>
       <workItem from="1664880366131" duration="34251000" />
-      <workItem from="1665562348544" duration="904000" />
+      <workItem from="1665562348544" duration="1662000" />
+      <workItem from="1665787123043" duration="23749000" />
+      <workItem from="1666625376634" duration="4534000" />
     </task>
+    <task id="LOCAL-00001" summary="Lab05 (with issues)">
+      <created>1665572200937</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665572200937</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,5 +138,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Lab05 (with issues)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab05 (with issues)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1666696607369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ie.setu.repository.*</FILTER>
+    </SUITE>
   </component>
 </project>
