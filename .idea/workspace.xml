@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="Lab06">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/domain/repository/ActivityDAO.kt" afterDir="false" />
+    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="Lab06 till &quot;Test your activity endpoints&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +111,7 @@
       <workItem from="1666625376634" duration="8784000" />
       <workItem from="1666702316938" duration="2629000" />
       <workItem from="1666706008722" duration="1887000" />
-      <workItem from="1666708602020" duration="3742000" />
+      <workItem from="1666708602020" duration="9539000" />
     </task>
     <task id="LOCAL-00001" summary="Lab05 (with issues)">
       <created>1665572200937</created>
@@ -135,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666696893489</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Lab06 till &quot;Test your activity endpoints&quot;">
+      <created>1666718130888</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666718130888</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +161,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab05 (with issues)" />
     <MESSAGE value="Lab06" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab06" />
+    <MESSAGE value="Lab06 till &quot;Test your activity endpoints&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab06 till &quot;Test your activity endpoints&quot;" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1666696607369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
