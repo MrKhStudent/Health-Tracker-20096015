@@ -5,6 +5,10 @@ import ie.setu.domain.User
 import ie.setu.domain.db.Activities
 import ie.setu.domain.db.Users
 import org.jetbrains.exposed.sql.ResultRow
+import com.fasterxml.jackson.databind.SerializationFeature
+import com.fasterxml.jackson.datatype.joda.JodaModule
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 
 fun mapToUser(it: ResultRow) = User(
     id = it[Users.id],
@@ -20,3 +24,8 @@ fun mapToActivity(it: ResultRow) = Activity(
     calories = it[Activities.calories],
     userId = it[Activities.userId]
 )
+inline fun <reified T: Any> jsonToObject(json: String) : T
+        = jacksonObjectMapper()
+    .registerModule(JodaModule())
+    .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
+    .readValue<T>(json)
