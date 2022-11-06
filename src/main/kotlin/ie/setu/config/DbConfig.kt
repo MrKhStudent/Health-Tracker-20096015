@@ -4,21 +4,6 @@ import mu.KotlinLogging
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.name
 
-/*class DbConfig{
-
-    //NOTE: you need the ?sslmode=require otherwise you get an error complaining about the ssl certificate
-    fun getDbConnection() :Database{
-        return Database.connect(
-            //"jdbc:postgresql://ec2-107-23-76-12.compute-1.amazonaws.com:5432/d2d24n666u9ral?sslmode=require",
-            "postgres://ajvhwjdgyhzgpf:5057321d6ce19b82a9dc35713c7d8c438e84cc2f0920a10aacf7769b6df2c23f@ec2-107-23-76-12.compute-1.amazonaws.com:5432/d2d24n666u9ral",
-            driver = "org.postgresql.Driver",
-            user = "ajvhwjdgyhzgpf",
-            password = "5057321d6ce19b82a9dc35713c7d8c438e84cc2f0920a10aacf7769b6df2c23f")
-    }
-
-}*/
-
-
 class DbConfig{
     private val logger = KotlinLogging.logger {}
 
@@ -28,10 +13,10 @@ class DbConfig{
         logger.info{"Starting DB Connection..."}
 
         val dbConfig = Database.connect(
-            "jdbc:postgresql://ec2-54-147-33-38.compute-1.amazonaws.com:5432/dd1alnffpluckj?sslmode=require",
+            "jdbc:postgresql://ec2-107-23-76-12.compute-1.amazonaws.com:5432/d2d24n666u9ral?sslmode=require",
             driver = "org.postgresql.Driver",
-            user = "decoqpkgvcdpue",
-            password = "c03e409c7da188b020d3be9238b88e61fa4b4fb4ecd0d6551523dec6daf1d78a")
+            user = "ajvhwjdgyhzgpf",
+            password = "5057321d6ce19b82a9dc35713c7d8c438e84cc2f0920a10aacf7769b6df2c23f")
 
         logger.info{"DbConfig name = " + dbConfig.name}
         logger.info{"DbConfig url = " + dbConfig.url}

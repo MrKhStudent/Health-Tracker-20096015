@@ -1,8 +1,6 @@
 package ie.setu.config
 
 import ie.setu.controllers.HealthTrackerController
-//import ie.setu.controllers.addActivity
-//import ie.setu.controllers.getAllActivities
 import  io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
 import io.javalin.plugin.openapi.OpenApiOptions
@@ -12,15 +10,19 @@ import io.javalin.plugin.openapi.ui.ReDocOptions
 import io.swagger.v3.oas.models.info.Info
 import com.fasterxml.jackson.databind.SerializationFeature
 import com.fasterxml.jackson.datatype.joda.JodaModule
-//import ie.setu.controllers.getActivitiesByUserId
+import ie.setu.utils.jsonObjectMapper
+import io.javalin.plugin.json.JavalinJackson
+import io.javalin.plugin.rendering.vue.VueComponent
 
 class JavalinConfig {
 
     fun startJavalinService(): Javalin {
-
         val app = Javalin.create {
             it.registerPlugin(getConfiguredOpenApiPlugin())
             it.defaultContentType = "application/json"
+            //---added this jsonMapper for our integration tests - serialise objects to json
+            it.jsonMapper(JavalinJackson(jsonObjectMapper()))
+            it.enableWebjars()
         }.apply {
             exception(Exception::class.java) { e, _ -> e.printStackTrace() }
             error(404) { ctx -> ctx.json("404 - Not Found") }
@@ -49,6 +51,19 @@ class JavalinConfig {
                     //The overall path is: "/api/users/:user-id/activities"
                     path("activities"){
                         get(HealthTrackerController::getActivitiesByUserId)
+                        delete(HealthTrackerController::deleteActivityByUserId)
+                    }
+                    path("bodyMeasurements"){
+                        get(HealthTrackerController::getBodyMeasurementsByUserId)
+                        delete(HealthTrackerController::deleteBodyMeasurementByUserId)
+                    }
+                    path("calories"){
+                        get(HealthTrackerController::getCaloriesByUserId)
+                        delete(HealthTrackerController::deleteCalorieByUserId)
+                    }
+                    path("workouts"){
+                        get(HealthTrackerController::getWorkoutsByUserId)
+                        delete(HealthTrackerController::deleteWorkoutByUserId)
                     }
                 }
                 path("/email/{email}"){
@@ -58,7 +73,40 @@ class JavalinConfig {
             path("/api/activities") {
                 get(HealthTrackerController::getAllActivities)
                 post(HealthTrackerController::addActivity)
+                path("{activity-id}") {
+                    get(HealthTrackerController::getActivitiesByActivityId)
+                    delete(HealthTrackerController::deleteActivityByActivityId)
+                    patch(HealthTrackerController::updateActivity)
+                }
             }
+            path("/api/bodyMeasurements") {
+                get(HealthTrackerController::getAllBodyMeasurements)
+                post(HealthTrackerController::addBodyMeasurement)
+                path("{bodyMeasurement-id}") {
+                    get(HealthTrackerController::getBodyMeasurementsByBodyMeasurementId)
+                    delete(HealthTrackerController::deleteBodyMeasurementByBodyMeasurementId)
+                    patch(HealthTrackerController::updateBodyMeasurement)
+                }
+            }
+            path("/api/calories") {
+                get(HealthTrackerController::getAllCalories)
+                post(HealthTrackerController::addCalorie)
+                path("{calorie-id}") {
+                    get(HealthTrackerController::getCaloriesByCalorieId)
+                    delete(HealthTrackerController::deleteCalorieByCalorieId)
+                    patch(HealthTrackerController::updateCalorie)
+                }
+            }
+            path("/api/workouts") {
+                get(HealthTrackerController::getAllWorkouts)
+                post(HealthTrackerController::addWorkout)
+                path("{workout-id}") {
+                    get(HealthTrackerController::getWorkoutsByWorkoutId)
+                    delete(HealthTrackerController::deleteWorkoutByWorkoutId)
+                    patch(HealthTrackerController::updateWorkout)
+                }
+            }
+
         }
     }
     fun getConfiguredOpenApiPlugin() = OpenApiPlugin(
