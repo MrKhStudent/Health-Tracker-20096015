@@ -1367,9 +1367,6 @@ inner class CreateWorkouts {
             .asJson()
     }
 
-
-
-
     ///////////////////////////////////////////////////// helper calories///////////////////
 //helper function to retrieve all calories
     private fun retrieveAllCalories(): HttpResponse<JsonNode> {
@@ -1500,7 +1497,6 @@ inner class CreateWorkouts {
             )
             .asJson()
     }
-
 
 
 

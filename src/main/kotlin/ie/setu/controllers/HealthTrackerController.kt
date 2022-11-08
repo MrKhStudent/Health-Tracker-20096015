@@ -162,6 +162,15 @@ object HealthTrackerController {
             .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
         ctx.json(mapper.writeValueAsString( activityDAO.getAll() ))
     }*/
+
+    /*@OpenApi(
+        summary = "Get all activities",
+        operationId = "getAllActivities",
+        tags = ["Activity"],
+        path = "/api/activities",
+        method = HttpMethod.GET,
+        responses = [OpenApiResponse("200", [OpenApiContent(Array<User>::class)])]
+    )*/
     fun getAllActivities(ctx: Context) {
         val activities = activityDAO.getAll()
         if (activities.size != 0) {
@@ -173,6 +182,17 @@ object HealthTrackerController {
         ctx.json(activities)
     }
     ////////////////////////////////////////////////////// getActivitiesByUserId
+
+    /*@OpenApi(
+        summary = "Get activity by ID",
+        operationId = "getActivitiesById",
+        tags = ["Activity"],
+        path = "/api/activities/{user-id}",
+        method = HttpMethod.GET,
+        pathParams = [OpenApiParam("user-id", Int::class, "The activity ID")],
+        responses  = [OpenApiResponse("200", [OpenApiContent(User::class)])]
+    )*/
+
     fun getActivitiesByUserId(ctx: Context) {
         if (userDao.findById(ctx.pathParam("user-id").toInt()) != null) {
             val activities = activityDAO.findByUserId(ctx.pathParam("user-id").toInt())
@@ -189,6 +209,17 @@ object HealthTrackerController {
         }
     }
     ////////////////////////////////////////////////////// addActivity
+
+    /*@OpenApi(
+        summary = "Add Activity",
+        operationId = "addActivity",
+        tags = ["Activity"],
+        path = "/api/activities",
+        method = HttpMethod.POST,
+        pathParams = [OpenApiParam("user-id", Int::class, "The activity ID")],
+        responses  = [OpenApiResponse("200")]
+    )*/
+
     fun addActivity(ctx: Context) {
         val activity : Activity = jsonToObject(ctx.body())
         val userId = userDao.findById(activity.userId)
@@ -204,17 +235,8 @@ object HealthTrackerController {
     }
 
     /////////////////////////////////////////// getActivitiesByActivityId
-/*
-    fun getActivitiesByActivityId(ctx: Context) {
-        val activity = activityDAO.findByActivityId((ctx.pathParam("activity-id").toInt()))
-        if (activity != null){
-            val mapper = jacksonObjectMapper()
-                .registerModule(JodaModule())
-                .configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false)
-            ctx.json(mapper.writeValueAsString(activity))
-        }
-    }
-*/
+
+
     fun getActivitiesByActivityId(ctx: Context) {
         val activity = activityDAO.findByActivityId((ctx.pathParam("activity-id").toInt()))
         if (activity != null){
