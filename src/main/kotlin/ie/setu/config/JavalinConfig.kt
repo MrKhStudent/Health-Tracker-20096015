@@ -20,7 +20,7 @@ class JavalinConfig {
         val app = Javalin.create {
             it.registerPlugin(getConfiguredOpenApiPlugin())
             it.defaultContentType = "application/json"
-            //---added this jsonMapper for our integration tests - serialise objects to json
+            //added this jsonMapper for our integration tests - serialise objects to json
             it.jsonMapper(JavalinJackson(jsonObjectMapper()))
             it.enableWebjars()
         }.apply {
@@ -106,6 +106,19 @@ class JavalinConfig {
                     patch(HealthTrackerController::updateWorkout)
                 }
             }
+
+            //---------------------------------------------- Registering our Vue routes
+
+            // The @routeComponent that we added in layout.html earlier will be replaced
+            // by the String inside of VueComponent. This means a call to / will load
+            // the layout and display our <home-page> component.
+            get("/", VueComponent("<home-page></home-page>"))
+            get("/users", VueComponent("<user-overview></user-overview>"))
+            get("/users/{user-id}", VueComponent("<user-profile></user-profile>"))
+            get("/users/{user-id}/activities", VueComponent("<user-activity-overview></user-activity-overview>"))
+            get("/users/{user-id}/bodyMeasurements", VueComponent("<user-bodyMeasurement-overview></user-bodyMeasurement-overview>"))
+            get("/users/{user-id}/calories", VueComponent("<user-calorie-overview></user-calorie-overview>"))
+            get("/users/{user-id}/workouts", VueComponent("<user-workout-overview></user-workout-overview>"))
 
         }
     }
