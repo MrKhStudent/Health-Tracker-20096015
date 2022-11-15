@@ -9,6 +9,9 @@
   </div>
 </template>
 
+
+
+
 <script>
 Vue.component("user-activity-overview",{
   template: "#user-activity-overview",
