@@ -39,20 +39,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Kotlin.AppKt">
-    <configuration name="HealthTrackerControllerTest$DeleteWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="JUnit.HealthTrackerControllerTest">
+    <configuration name="HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -61,13 +61,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$DeleteWorkouts" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$CreateActivities" />
+      <option name="METHOD_NAME" value="add an activity when a user exists for it, returns a 201 response" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HealthTrackerControllerTest$CreateBodyMeasurements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="healthtrackerrest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ie.setu.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$CreateBodyMeasurements" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTrackerControllerTest$ReadWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTrackerControllerTest$CreateCalories" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -76,13 +92,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$ReadWorkouts" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$CreateCalories" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HealthTrackerControllerTest$UpdateWorkouts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HealthTrackerControllerTest$ReadBodyMeasurements.get bodyMeasurement by bodyMeasurement id when bodyMeasurement exists returns 200 response" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="healthtrackerrest" />
       <extension name="coverage">
         <pattern>
@@ -91,8 +107,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
-      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$UpdateWorkouts" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest$ReadBodyMeasurements" />
+      <option name="METHOD_NAME" value="get bodyMeasurement by bodyMeasurement id when bodyMeasurement exists returns 200 response" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,13 +125,6 @@
       <option name="PACKAGE_NAME" value="ie.setu.controllers" />
       <option name="MAIN_CLASS_NAME" value="ie.setu.controllers.HealthTrackerControllerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ie.setu.AppKt" />
-      <module name="healthtrackerrest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.AppKt" />
         <item itemvalue="JUnit.HealthTrackerControllerTest" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$DeleteWorkouts" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$UpdateWorkouts" />
-        <item itemvalue="JUnit.HealthTrackerControllerTest$ReadWorkouts" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$CreateCalories" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$CreateBodyMeasurements" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$ReadBodyMeasurements.get bodyMeasurement by bodyMeasurement id when bodyMeasurement exists returns 200 response" />
+        <item itemvalue="JUnit.HealthTrackerControllerTest$CreateActivities.add an activity when a user exists for it, returns a 201 response" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +187,8 @@
       <workItem from="1667703125267" duration="9294000" />
       <workItem from="1667740311937" duration="7866000" />
       <workItem from="1667821801506" duration="13742000" />
-      <workItem from="1668162907964" duration="25793000" />
+      <workItem from="1668162907964" duration="26601000" />
+      <workItem from="1669126611264" duration="3198000" />
     </task>
     <task id="LOCAL-00001" summary="Lab05 (with issues)">
       <created>1665572200937</created>
@@ -249,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668529706915</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Lab09 is done.">
+      <created>1669119153966</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669119153966</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
