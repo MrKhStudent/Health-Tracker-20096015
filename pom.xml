@@ -17,7 +17,6 @@
         <junit.platform.version>1.8.2</junit.platform.version>
         <dokka.version>1.7.20</dokka.version>
     </properties>
-
     <!-- Location of the Maven Plugin for Dokka -->
     <pluginRepositories>
         <pluginRepository>
@@ -208,6 +207,20 @@
                         <include>*Test</include>
                     </includes>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+                <version>${dokka.version}</version>
+                <executions>
+                    <execution>
+                        <phase>pre-site</phase>
+                        <goals>
+                            <goal>dokka</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

@@ -9,6 +9,9 @@ import org.jetbrains.exposed.sql.transactions.transaction
 import ie.setu.utils.mapToUser
 import org.jetbrains.exposed.sql.*
 
+/**
+ * Manages the database transactions and returns the results of the transactions
+ */
 
 class UserDAO {
 
@@ -31,6 +34,12 @@ class UserDAO {
                 .firstOrNull()
         }
     }
+
+//    for Dokka dokka
+    /**
+     * Adds a [user] to the Users table.
+     * @return the id of the user following the add.
+     */
 
     fun save(user: User) : Int?{
         return transaction {
