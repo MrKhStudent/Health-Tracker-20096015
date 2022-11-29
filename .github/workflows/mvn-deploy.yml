@@ -31,3 +31,4 @@ jobs:
           cache: 'maven'
       - name: Maven Verify
         run: mvn -B clean verify
+-x
