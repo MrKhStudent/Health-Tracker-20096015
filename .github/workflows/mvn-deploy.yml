@@ -17,6 +17,12 @@ jobs:
           cache: 'maven'
       - name: Maven Package
         run: mvn -B clean package -DskipTests
+   # Create Artifact - Jar Builds 
+      - name: Jar Builds
+        uses: actions/upload-artifact@v3
+        with:
+          name: Jar with Builds
+          path: target/*.jar      
       
   documentation: 
     runs-on: ubuntu-latest
@@ -62,11 +68,4 @@ jobs:
        - uses: devtomio/action-railway@v1.1.4
          name: Deploy to Railway
          env:
-           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} 
-   # Create Artifact - Jar Builds 
-       - name: Jar Builds
-         uses: actions/upload-artifact@v3
-         with:
-          name: Jar with Builds
-          path: target/*.jar
-          
+           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
