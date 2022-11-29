@@ -32,7 +32,7 @@ jobs:
       - name: Maven Verify -e
         run: mvn -B clean verify
         
-deploy:
+  deploy:
     name: Railway Deploy
     needs: test
     runs-on: ubuntu-latest  
@@ -42,4 +42,5 @@ deploy:
        - uses: devtomio/action-railway@v1.1.4
          name: Deploy to Railway
          env:
-           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}  
+           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }} 
+
