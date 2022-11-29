@@ -29,5 +29,5 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-      - name: Maven Verify
-        run: mvn -B clean verify -x
+      - name: Maven Verify -e
+        run: mvn -B clean verify
