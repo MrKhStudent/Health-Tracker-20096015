@@ -74,7 +74,7 @@ class WorkoutDAOTest {
                 val userDAO = populateUserTable()
                 val workoutDAO = populateWorkoutTable()
                 //Act & Assert
-                assertEquals(0, workoutDAO.findByUserId(3).size)
+                assertEquals(0, workoutDAO.findByUserId(30).size)
             }
         }
 
@@ -86,8 +86,8 @@ class WorkoutDAOTest {
                 val workoutDAO = populateWorkoutTable()
                 //Act & Assert
                 assertEquals(workout1, workoutDAO.findByUserId(1).get(0))
-                assertEquals(workout2, workoutDAO.findByUserId(1).get(1))
-                assertEquals(workout3, workoutDAO.findByUserId(2).get(0))
+                assertEquals(workout2, workoutDAO.findByUserId(2).get(0))
+                assertEquals(workout3, workoutDAO.findByUserId(3).get(0))
             }
         }
 
@@ -211,7 +211,7 @@ class WorkoutDAOTest {
 
                 //Act & Assert
                 assertEquals(3, workoutDAO.getAll().size)
-                workoutDAO.deleteByUserId(3)
+                workoutDAO.deleteByUserId(4)
                 assertEquals(3, workoutDAO.getAll().size)
             }
         }
@@ -227,7 +227,7 @@ class WorkoutDAOTest {
                 //Act & Assert
                 assertEquals(3, workoutDAO.getAll().size)
                 workoutDAO.deleteByUserId(1)
-                assertEquals(1, workoutDAO.getAll().size)
+                assertEquals(2, workoutDAO.getAll().size)
             }
         }
     }

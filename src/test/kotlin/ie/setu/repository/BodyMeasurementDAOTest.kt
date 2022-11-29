@@ -35,6 +35,7 @@ class BodyMeasurementDAOTest {
         }
     }
 
+
     @Nested
     inner class CreateBodyMeasurements {
 
@@ -74,7 +75,7 @@ class BodyMeasurementDAOTest {
                 val userDAO = populateUserTable()
                 val bodyMeasurementDAO = populateBodyMeasurementTable()
                 //Act & Assert
-                assertEquals(0, bodyMeasurementDAO.findByUserId(3).size)
+                assertEquals(0, bodyMeasurementDAO.findByUserId(4).size)
             }
         }
 
@@ -86,8 +87,8 @@ class BodyMeasurementDAOTest {
                 val bodyMeasurementDAO = populateBodyMeasurementTable()
                 //Act & Assert
                 assertEquals(bodyMeasurement1, bodyMeasurementDAO.findByUserId(1).get(0))
-                assertEquals(bodyMeasurement2, bodyMeasurementDAO.findByUserId(1).get(1))
-                assertEquals(bodyMeasurement3, bodyMeasurementDAO.findByUserId(2).get(0))
+                assertEquals(bodyMeasurement2, bodyMeasurementDAO.findByUserId(2).get(0))
+                assertEquals(bodyMeasurement3, bodyMeasurementDAO.findByUserId(3).get(0))
             }
         }
 
@@ -209,7 +210,7 @@ class BodyMeasurementDAOTest {
 
                 //Act & Assert
                 assertEquals(3, bodyMeasurementDAO.getAll().size)
-                bodyMeasurementDAO.deleteByUserId(3)
+                bodyMeasurementDAO.deleteByUserId(11)
                 assertEquals(3, bodyMeasurementDAO.getAll().size)
             }
         }
@@ -225,7 +226,7 @@ class BodyMeasurementDAOTest {
                 //Act & Assert
                 assertEquals(3, bodyMeasurementDAO.getAll().size)
                 bodyMeasurementDAO.deleteByUserId(1)
-                assertEquals(1, bodyMeasurementDAO.getAll().size)
+                assertEquals(2, bodyMeasurementDAO.getAll().size)
             }
         }
     }
