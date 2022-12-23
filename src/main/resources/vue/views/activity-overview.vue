@@ -53,7 +53,7 @@
       <div class="list-group-item d-flex align-items-start"
            v-for="(activity,index) in activities" v-bind:key="index">
         <div class="mr-auto p-2">
-          <span><a :href="`/activities/${activity.id}`"> {{ activity.description }} ({{ activity.duration }}) ({{ activity.calories }}) ({{ activity.started }})</a></span>
+          <span><a :href="`/activities/${activity.id}`"> {{ activity.description }} (Duration: {{ activity.duration }} mins, Calories: {{ activity.calories }} cal, Started at: {{ activity.started }})</a></span>
         </div>
 
         <!--------------add an "update" and "delete" button for each activity-->
