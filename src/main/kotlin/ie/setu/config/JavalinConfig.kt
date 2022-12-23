@@ -115,6 +115,14 @@ class JavalinConfig {
             get("/", VueComponent("<home-page></home-page>"))
             get("/users", VueComponent("<user-overview></user-overview>"))
             get("/users/{user-id}", VueComponent("<user-profile></user-profile>"))
+
+            get("/activities/{user-id}", VueComponent("<activity-profile></activity-profile>"))
+            get("/activities", VueComponent("<activity-overview></activity-overview>"))
+
+            get("/bodyMeasurements/{user-id}", VueComponent("<bodyMeasurement-profile></bodyMeasurement-profile>"))
+            get("/bodyMeasurements", VueComponent("<bodyMeasurement-overview></bodyMeasurement-overview>"))
+
+
             get("/users/{user-id}/activities", VueComponent("<user-activity-overview></user-activity-overview>"))
             get("/users/{user-id}/bodyMeasurements", VueComponent("<user-bodyMeasurement-overview></user-bodyMeasurement-overview>"))
             get("/users/{user-id}/calories", VueComponent("<user-calorie-overview></user-calorie-overview>"))

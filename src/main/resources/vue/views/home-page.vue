@@ -22,6 +22,25 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">All BodyMeasurements</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{bodyMeasurements.length}} bodyMeasurements</h5>
+            <a href="/bodyMeasurements" class="btn btn-primary">More Details...</a>
+          </div>
+        </div>
+      </div>
+<!--      <div class="col">-->
+<!--        <div class="card">-->
+<!--          <h5 class="card-header">Total Bodymeasurements</h5>-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title">{{bodymeasurements.length}} bodymeasurements</h5>-->
+<!--            <a href="/bodymeasurements" class="btn btn-primary">More Details...</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
     </div>
   </app-layout>
 </template>
@@ -40,6 +59,7 @@ Vue.component('home-page',
       data: () => ({
         users: [],
         activities: []
+        bodyMeasurements: []
       }),
       created() {
         axios.get("/api/users")
@@ -48,6 +68,9 @@ Vue.component('home-page',
         axios.get("/api/activities")
             .then(res => this.activities = res.data)
             .catch(() => alert("Error while fetching activities"));
+        axios.get("/api/bodyMeasurements")
+            .then(res => this.bodyMeasurements = res.data)
+            .catch(() => alert("Error while fetching bodyMeasurements"));
       }
     });
 </script>

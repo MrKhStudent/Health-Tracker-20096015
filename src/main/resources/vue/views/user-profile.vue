@@ -72,7 +72,7 @@
 
 
 <script>
-Vue.component("user-profile", {
+  Vue.component("user-profile", {
   template: "#user-profile",
   data: () => ({
     user: null,

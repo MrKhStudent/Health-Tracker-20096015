@@ -24,6 +24,15 @@
             <li class="nav-item">
               <a class="nav-link" href="/activities">Activities</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bodyMeasurements">BodyMeasurements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bodyMeasurements">Calories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/bodyMeasurements">Workouts</a>
+            </li>
           </ul>
         </div>
       </nav>
