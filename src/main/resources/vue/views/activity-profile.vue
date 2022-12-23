@@ -37,7 +37,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text" id="input-user-id">User ID</span>
             </div>
-            <input type="number" class="form-control" v-model="user.id" name="id" readonly placeholder="Id"/>
+            <input type="number" class="form-control" v-model="activity.id" name="id" readonly placeholder="Id"/>
           </div>
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -83,7 +83,7 @@ template: "#activity-profile",
 
 }),
     created: function () {
-  const userId = this.$javalin.pathParams["user-id"];
+  const userId = this.$javalin.pathParams["activity-id"];
   const url = `/api/activities/${userId}`
   axios.get(url)
       .then(res => this.activity = res.data)
@@ -105,7 +105,7 @@ template: "#activity-profile",
 // ---------------------------------------- updateActivity() method:
 methods: {
   updateActivity: function () {
-    const userId = this.$javalin.pathParams["user-id"];
+    const userId = this.$javalin.pathParams["activity-id"];
     const url = `/api/activities/${userId}`
     axios.patch(url,
         {
@@ -124,7 +124,7 @@ methods: {
 //--------------------------------------------------- deleteActivity() method:
   deleteActivity: function () {
     if (confirm("Do you really want to delete? :( ")) {
-      const userId = this.$javalin.pathParams["user-id"];
+      const userId = this.$javalin.pathParams["activity-id"];
       const url = `/api/activities/${userId}`
       axios.delete(url)
           .then(response => {

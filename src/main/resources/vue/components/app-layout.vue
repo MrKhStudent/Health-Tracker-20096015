@@ -28,10 +28,10 @@
               <a class="nav-link" href="/bodyMeasurements">BodyMeasurements</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bodyMeasurements">Calories</a>
+              <a class="nav-link" href="/calories">Calories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/bodyMeasurements">Workouts</a>
+              <a class="nav-link" href="/workouts">Workouts</a>
             </li>
           </ul>
         </div>

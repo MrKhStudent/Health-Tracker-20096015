@@ -18,7 +18,7 @@ Vue.component("bodyMeasurement-profile", {
     bodyMeasurement: null
   }),
   created: function () {
-    const userId = this.$javalin.pathParams["user-id"];
+    const userId = this.$javalin.pathParams["bodyMeasurement-id"];
     const url = `/api/bodyMeasurements/${userId}`
     axios.get(url)
         .then(res => this.bodyMeasurement = res.data)

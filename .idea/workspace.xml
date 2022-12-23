@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="Dokka Dokka added">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-profile.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-overview.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-profile.vue" afterDir="false" />
+    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="activity and bodyM added but have errors.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ie/setu/config/JavalinConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/components/app-layout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/activity-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +189,8 @@
       <workItem from="1671619233729" duration="12275000" />
       <workItem from="1671707933913" duration="4434000" />
       <workItem from="1671713712760" duration="12754000" />
-      <workItem from="1671802470297" duration="8370000" />
+      <workItem from="1671802470297" duration="9586000" />
+      <workItem from="1671822858983" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="Lab05 (with issues)">
       <created>1665572200937</created>
@@ -294,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669749950744</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="activity and bodyM added but have errors.">
+      <created>1671818556859</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671818556859</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +326,8 @@
     <MESSAGE value="Tests are now all Passed." />
     <MESSAGE value="129 Tests are now all Passed." />
     <MESSAGE value="Dokka Dokka added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dokka Dokka added" />
+    <MESSAGE value="activity and bodyM added but have errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="activity and bodyM added but have errors." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1666696607369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
