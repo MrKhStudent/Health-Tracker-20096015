@@ -64,6 +64,16 @@
           </li>
         </ul>
       </div>
+      <!-------------------------------------- To add a new hyperlink for bodyMeasurement-->
+      <div class="card-footer text-left">
+        <p  v-if="bodyMeasurements.length == 0"> No bodyMeasurements yet...</p>
+        <p  v-if="bodyMeasurements.length > 0"> BodyMeasurements so far...</p>
+        <ul>
+          <li v-for="bodyMeasurement in bodyMeasurements">
+            {{ bodyMeasurement.weight }} kg with {{ bodyMeasurement.height }} cm
+          </li>
+        </ul>
+      </div>
       <!---------------------------------------------------------------------->
     </div>
   </app-layout>
@@ -80,6 +90,7 @@
 
 //add the new activities array to the data area:
     activities: [],
+    bodyMeasurements: [],
 
   }),
   created: function () {
@@ -99,7 +110,12 @@
           console.log("No activities added yet (this is ok): " + error)
         })
     //------------------------------------------------
-
+    // --------------------------------------------- fetch of the bodyMeasurements
+    axios.get(url + `/bodyMeasurements`)
+        .then(res => this.bodyMeasurements = res.data)
+        .catch(error => {
+          console.log("No bodyMeasurements added yet (this is ok): " + error)
+        })
 
   },
   // ---------------------------------------- updateUser() method:

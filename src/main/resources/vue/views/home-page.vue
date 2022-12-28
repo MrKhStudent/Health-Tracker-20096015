@@ -1,8 +1,6 @@
 <!-- the "home-page" element is passed as a parameter to VueComponent in the JavalinConfig file -->
 <template id="home-page">
   <app-layout>
-<!-- <h1> Welcome to the Health Tracker App (20096015)</h1>-->
-
     <div class="row">
       <div class="col">
         <div class="card">
@@ -24,41 +22,24 @@
       </div>
       <div class="col">
         <div class="card">
-          <h5 class="card-header">All BodyMeasurements</h5>
+          <h5 class="card-header">Total BodyMeasurements</h5>
           <div class="card-body">
             <h5 class="card-title">{{bodyMeasurements.length}} bodyMeasurements</h5>
             <a href="/bodyMeasurements" class="btn btn-primary">More Details...</a>
           </div>
         </div>
       </div>
-<!--      <div class="col">-->
-<!--        <div class="card">-->
-<!--          <h5 class="card-header">Total Bodymeasurements</h5>-->
-<!--          <div class="card-body">-->
-<!--            <h5 class="card-title">{{bodymeasurements.length}} bodymeasurements</h5>-->
-<!--            <a href="/bodymeasurements" class="btn btn-primary">More Details...</a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-
     </div>
   </app-layout>
 </template>
 
-
-<!--<script>
-Vue.component('home-page',
-    {
-      template: "#home-page",
-    });
-</script>-->
 <script>
 Vue.component('home-page',
     {
       template: "#home-page",
       data: () => ({
         users: [],
-        activities: []
+        activities: [],
         bodyMeasurements: []
       }),
       created() {

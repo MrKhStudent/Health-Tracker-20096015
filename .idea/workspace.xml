@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="activity issue is solved.">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/activity-overview.vue" afterDir="false" />
+    <list default="true" id="de71ab10-fcf9-4a61-aaea-4f3c9064ee5d" name="Changes" comment="activity overview updated.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-overview.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-overview.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/bodyMeasurement-profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/home-page.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vue/views/user-profile.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +190,9 @@
       <workItem from="1671707933913" duration="4434000" />
       <workItem from="1671713712760" duration="12754000" />
       <workItem from="1671802470297" duration="9586000" />
-      <workItem from="1671822858983" duration="3445000" />
+      <workItem from="1671822858983" duration="6120000" />
+      <workItem from="1671831995225" duration="8105000" />
+      <workItem from="1672169435281" duration="3424000" />
     </task>
     <task id="LOCAL-00001" summary="Lab05 (with issues)">
       <created>1665572200937</created>
@@ -300,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671829069056</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="activity overview updated.">
+      <created>1671829530300</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671829530300</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +344,8 @@
     <MESSAGE value="Dokka Dokka added" />
     <MESSAGE value="activity and bodyM added but have errors." />
     <MESSAGE value="activity issue is solved." />
-    <option name="LAST_COMMIT_MESSAGE" value="activity issue is solved." />
+    <MESSAGE value="activity overview updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="activity overview updated." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/healthtrackerrest$UserDAOTest.ic" NAME="UserDAOTest Coverage Results" MODIFIED="1666696607369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
