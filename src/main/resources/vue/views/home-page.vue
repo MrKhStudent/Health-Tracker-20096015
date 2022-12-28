@@ -29,6 +29,15 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card">
+          <h5 class="card-header">Total Calories</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{calories.length}} calories</h5>
+            <a href="/calories" class="btn btn-primary">More Details...</a>
+          </div>
+        </div>
+      </div>
     </div>
   </app-layout>
 </template>
